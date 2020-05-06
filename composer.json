@@ -5,6 +5,7 @@
         "php": "^7.2.5",
         "ext-ctype": "*",
         "ext-iconv": "*",
+        "api-platform/admin-pack": "^1.0",
         "excelwebzone/recaptcha-bundle": "^1.5",
         "laminas/laminas-code": "^3.4",
         "laminas/laminas-eventmanager": "^3.2",
@@ -30,6 +31,7 @@
         "symfony/twig-pack": "*",
         "symfony/validator": "5.0.*",
         "symfony/web-link": "5.0.*",
+        "symfony/webpack-encore-bundle": "^1.7",
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
