@@ -1,5 +1,9 @@
 easy_admin:
-  entities:
-     class: App\Entity\Post
+   entities:
+    form:
+        class: App\Entity\Post
+        form:
+        fields:
+            - {property: 'image', type: 'file'}
      
         

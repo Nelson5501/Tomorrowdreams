@@ -5,18 +5,18 @@ namespace App\Entity;
 use App\service\ImageService;
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\ORM\Mapping\colums;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Doctrine\ORM\Mapping\colums;
+
 
 
 /**
  * @ORM\Entity(repositoryClass=PostRepository::class)
- * @Doctrine\ORM\Mapping\colums
- * @ORM\Column(type="string", length=250, nullable=false)
  * @Vich\Uploadable
+ * @Doctrine\ORM\Mapping\colums
  */
  
 
@@ -62,7 +62,7 @@ class Post {
      */
     private $updatedAt;
 
-    /**
+    /** 
      * @ORM\Column(type="text")
      * 
      */
