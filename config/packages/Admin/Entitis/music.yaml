@@ -1,0 +1,9 @@
+easy_admin:
+  entities:
+      music:
+          class: App\Entity\Music
+          new:
+            fields:
+                - {property: 'name'}
+                - {property: 'dj'}
+                - {property: 'cover', type: 'file'}

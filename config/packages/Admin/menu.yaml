@@ -1,0 +1,21 @@
+easy_admin:
+   design:
+     brand_color: 'black'
+     
+     assets: 
+        css:
+            - 'assets/css/admin.css'
+     menu:
+
+        - label: 'Article'
+          icon: 'newspaper-o'
+          children: 
+              {entity: 'Post'}
+              
+        - label: 'Music'
+          icon: 'play-circle'
+          children: 
+              {entity: 'Upload'}
+
+       
+              

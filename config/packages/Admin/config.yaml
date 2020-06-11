@@ -1,0 +1,7 @@
+easy_admin:
+      site_name: 'Tomorrowdreams'
+      entities:
+        - App\Entity\Category
+        - App\Entity\Music
+        - App\Entity\Post
+        - App\Entity\Upload

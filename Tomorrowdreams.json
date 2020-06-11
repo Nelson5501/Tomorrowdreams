@@ -1,9 +1,0 @@
-[
-{"type":"header","version":"4.9.3","comment":"Export to JSON plugin for PHPMyAdmin"},
-{"type":"database","name":"Tomorrowdreams"},
-{"type":"table","name":"Tomorrowdreams","database":"Tomorrowdreams","data":
-[
-
-]
-}
-]
