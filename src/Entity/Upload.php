@@ -4,9 +4,11 @@ namespace App\Entity;
 
 use App\Repository\UploadRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Columns;
 
 /**
  * @ORM\Entity(repositoryClass=UploadRepository::class)
+ * @Doctrine\ORM\Mapping\Columns;
  */
 class Upload
 {
@@ -14,6 +16,7 @@ class Upload
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Doctrine\ORM\Mapping\Columns;
      */
     private $id;
 

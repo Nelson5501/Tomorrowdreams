@@ -9,7 +9,8 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\Mapping\colums;
+use Doctrine\ORM\Mapping\Columns;
+
 
 
 
@@ -17,12 +18,15 @@ use Doctrine\ORM\Mapping\colums;
  * @ORM\Entity(repositoryClass=PostRepository::class)
  * @Vich\Uploadable
  * @Doctrine\ORM\Mapping\colums
+ * @Doctrine\ORM\Mapping\colums
  */
  
 
 class Post {
    
     /**
+     * @Vich\Uploadable
+     * @ORM\Entity(repositoryClass=PostRepository::class)
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
@@ -32,24 +36,29 @@ class Post {
     private $id;
 
     /**
+     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="string", length=255)
      */
 
     private $name;
 
     /**
+     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="string", length=255)
      */
 
     private $content;
 
     /**
+    * @Doctrine\ORM\Mapping\colums
     * @ORM\colums(type="string", length=255)
+    * @var \Datetime
     */
 
     private $image;
 
     /**
+     * @Doctrine\ORM\Mapping\colums
      * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
      * @var File
      */
@@ -57,19 +66,22 @@ class Post {
     private $imageFile;
 
     /**
+     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="file")
-     * @var \DateTime
+     * @var File
      */
     private $updatedAt;
 
     /** 
+     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="text")
-     * 
+     * @var File
      */
 
     private $slug;
 
     /**
+    * @Doctrine\ORM\Mapping\colums
     * @ORM\Column(type="string", length=255)
     */    
     

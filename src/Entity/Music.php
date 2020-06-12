@@ -4,9 +4,12 @@ namespace App\Entity;
 
 use App\Repository\MusicRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Columns;
+
 
 /**
  * @ORM\Entity(repositoryClass=MusicRepository::class)
+ * @Doctrine\ORM\Mapping\Columns;
  */
 class Music
 {
@@ -14,6 +17,8 @@ class Music
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Doctrine\ORM\Mapping\Columns;
+
      */
     private $id;
 

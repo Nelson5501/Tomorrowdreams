@@ -4,16 +4,21 @@ namespace App\Entity;
 
 use App\Repository\CategoryRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\Columns;
+
 
 /**
  * @ORM\Entity(repositoryClass=CategoryRepository::class)
+ * @Doctrine\ORM\Mapping\Columns;
  */
+
 class Category
 {
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Doctrine\ORM\Mapping\Columns;
      */
     private $id;
 

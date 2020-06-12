@@ -8,6 +8,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass=AdminRepository::class)
+ * @Doctrine\ORM\Mapping\Columns;
  */
 class Admin implements UserInterface
 {
