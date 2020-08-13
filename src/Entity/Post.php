@@ -2,41 +2,54 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping\colums;
 use App\service\ImageService;
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\Mapping\Columns;
-
-
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Doctrine\ORM\Mapping\Entity;
+use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\Id;
+use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping\GeneratedValue;
+use Doctrine\Bundle\DoctrineBundle;
+use Doctrine\Bundle\DoctrineBundle\Controller;
+use vich\UploaderBundle\Mapping\Annotation;
 
 
 /**
  * @ORM\Entity(repositoryClass=PostRepository::class)
+ * image
+ * imageFile
+ * updatedAt
+ * @Doctrine\ORM\Mapping\colums
+ * @Doctrine\ORM\Mapping\Entity
+ * @Orm\column(name='status',type='string,length=255')
  * @Vich\Uploadable
- * @Doctrine\ORM\Mapping\colums
- * @Doctrine\ORM\Mapping\colums
  */
- 
 
 class Post {
    
     /**
+     * image
+     * imageFile
+     * updatedAt  
      * @Vich\Uploadable
      * @ORM\Entity(repositoryClass=PostRepository::class)
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
-     * @Doctrine\ORM\Mapping\colums
-     */
+     * @var int
+     * @Orm\column(name='status',type='string,length=255'
+     * use @Doctrine\ORM\Mapping\colums
+     **/
 
     private $id;
 
     /**
-     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="string", length=255)
      */
 
@@ -70,6 +83,7 @@ class Post {
      * @ORM\Column(type="file")
      * @var File
      */
+
     private $updatedAt;
 
     /** 

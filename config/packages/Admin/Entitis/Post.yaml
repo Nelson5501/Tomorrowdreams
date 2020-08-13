@@ -1,9 +1,9 @@
-easy_admin:
-   entities:
+easy_admin: 
+   entities: 
     form:
-        class: App\Entity\Post
-        form:
+        class: Doctrine\ORM\Mapping\colums
+        form: 
         fields:
             - {property: 'image', type: 'file'}
-     
+            
         

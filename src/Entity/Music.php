@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\MusicRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\ORM\Mapping\Columns;
+use Doctrine\ORM\Mapping\colums;
 
 
 /**

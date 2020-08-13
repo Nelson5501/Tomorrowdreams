@@ -5,6 +5,7 @@ namespace App\Entitys;
 use App\Repository\AdminRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Doctrine\ORM\Mapping\colums;
 
 /**
  * @ORM\Entity(repositoryClass=AdminRepository::class)
