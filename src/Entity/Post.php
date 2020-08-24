@@ -2,7 +2,8 @@
 
 namespace App\Entity;
 
-use Doctrine\ORM\Mapping\colums;
+
+use Doctrine\ORM\Mapping\colum;
 use App\service\ImageService;
 use App\Repository\PostRepository;
 use Doctrine\ORM\Mapping as ORM;
@@ -13,7 +14,7 @@ use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\Table;
 use Doctrine\ORM\Mapping\Id;
-use Doctrine\ORM\Mapping\Column;
+use Doctrine\ORM\Mapping\colums;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\Bundle\DoctrineBundle;
 use Doctrine\Bundle\DoctrineBundle\Controller;
@@ -32,8 +33,10 @@ use vich\UploaderBundle\Mapping\Annotation;
  */
 
 class Post {
-   
+
+
     /**
+     * use @Doctrine\ORM\Mapping\colums
      * image
      * imageFile
      * updatedAt  
@@ -43,8 +46,7 @@ class Post {
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
      * @var int
-     * @Orm\column(name='status',type='string,length=255'
-     * use @Doctrine\ORM\Mapping\colums
+     * @ORM\column(name='status',type='string,length=255'
      **/
 
     private $id;

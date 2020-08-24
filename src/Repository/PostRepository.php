@@ -4,7 +4,7 @@ namespace App\Repository;
 use App\Entity\Post;
 
 use Doctrine\ORM\Mapping as ORM;
-use Doctrine\ORM\Mapping\colums;
+use Doctrine\ORM\Mapping\colum;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
@@ -25,6 +25,7 @@ class PostRepository extends ServiceEntityRepository
 
     // /**
     //  * @return Post[] Returns an array of Post objects
+    //  * @Doctrine\ORM\Mapping\colums;
     //  */
     /*
     public function findByExampleField($value)
