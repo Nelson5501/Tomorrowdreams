@@ -3,22 +3,22 @@
 namespace App\Entity;
 
 
-use Doctrine\ORM\Mapping\colum;
 use App\service\ImageService;
 use App\Repository\PostRepository;
+use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\Table;
 use Doctrine\ORM\Mapping\Id;
-use Doctrine\ORM\Mapping\colums;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\Bundle\DoctrineBundle;
 use Doctrine\Bundle\DoctrineBundle\Controller;
 use vich\UploaderBundle\Mapping\Annotation;
+use Doctrine\ORM\Mapping\colum;
+
 
 
 /**
@@ -28,7 +28,7 @@ use vich\UploaderBundle\Mapping\Annotation;
  * updatedAt
  * @Doctrine\ORM\Mapping\colums
  * @Doctrine\ORM\Mapping\Entity
- * @Orm\column(name='status',type='string,length=255')
+ * @Orm\columns(name='status',type='string,length=255')
  * @Vich\Uploadable
  */
 
@@ -36,7 +36,7 @@ class Post {
 
 
     /**
-     * use @Doctrine\ORM\Mapping\colums
+     * use doctrine\ORM\mapping\colum
      * image
      * imageFile
      * updatedAt  
@@ -47,9 +47,11 @@ class Post {
      * @ORM\Column(type="integer")
      * @var int
      * @ORM\column(name='status',type='string,length=255'
+     * use "@Doctrine\ORM\mapping\colums"
      **/
 
-    private $id;
+    
+     private $id;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -58,14 +60,12 @@ class Post {
     private $name;
 
     /**
-     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="string", length=255)
      */
 
     private $content;
 
     /**
-    * @Doctrine\ORM\Mapping\colums
     * @ORM\colums(type="string", length=255)
     * @var \Datetime
     */
@@ -73,7 +73,6 @@ class Post {
     private $image;
 
     /**
-     * @Doctrine\ORM\Mapping\colums
      * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
      * @var File
      */
@@ -81,7 +80,6 @@ class Post {
     private $imageFile;
 
     /**
-     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="file")
      * @var File
      */
@@ -89,15 +87,13 @@ class Post {
     private $updatedAt;
 
     /** 
-     * @Doctrine\ORM\Mapping\colums
      * @ORM\Column(type="text")
      * @var File
      */
 
     private $slug;
 
-    /**
-    * @Doctrine\ORM\Mapping\colums
+    /*
     * @ORM\Column(type="string", length=255)
     */    
     
