@@ -2,7 +2,7 @@
 
 namespace App\Entity;
 
-
+//Anchor this is an test 
 use App\service\ImageService;
 use App\Repository\PostRepository;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
@@ -12,12 +12,12 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping\Entity;
 use Doctrine\ORM\Mapping\Table;
+use Doctrine\ORM\Mapping\column;
 use Doctrine\ORM\Mapping\Id;
 use Doctrine\ORM\Mapping\GeneratedValue;
 use Doctrine\Bundle\DoctrineBundle;
 use Doctrine\Bundle\DoctrineBundle\Controller;
 use vich\UploaderBundle\Mapping\Annotation;
-use Doctrine\ORM\Mapping\colum;
 
 
 
@@ -26,7 +26,7 @@ use Doctrine\ORM\Mapping\colum;
  * image
  * imageFile
  * updatedAt
- * @Doctrine\ORM\Mapping\colums
+ * @Doctrine\ORM\Mapping\column
  * @Doctrine\ORM\Mapping\Entity
  * @Orm\columns(name='status',type='string,length=255')
  * @Vich\Uploadable
@@ -34,9 +34,7 @@ use Doctrine\ORM\Mapping\colum;
 
 class Post {
 
-
     /**
-     * use doctrine\ORM\mapping\colum
      * image
      * imageFile
      * updatedAt  
@@ -44,29 +42,30 @@ class Post {
      * @ORM\Entity(repositoryClass=PostRepository::class)
      * @ORM\Id()
      * @ORM\GeneratedValue()
+     * @Doctrine/ORM/Mapping/column
      * @ORM\Column(type="integer")
      * @var int
      * @ORM\column(name='status',type='string,length=255'
-     * use "@Doctrine\ORM\mapping\colums"
+
      **/
 
     
      private $id;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Columnn(type="string", length=255)
      */
 
     private $name;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Columnn(type="string", length=255)
      */
 
     private $content;
 
     /**
-    * @ORM\colums(type="string", length=255)
+    * @ORM\column(type="string", length=255)
     * @var \Datetime
     */
 
